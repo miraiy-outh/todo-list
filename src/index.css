@@ -1,13 +1,207 @@
-body {
+* {
+  --bg-color: white;
+  --text-color-done: rgb(122, 122, 122);
+  --button-bg-color-accent: rgb(59, 64, 213);
+  --button-bg-color-accent-darker: rgb(54, 57, 191);
+  --button-bg-color: white;
+  --button-text-accent: white;
+  --hover-color: rgb(237, 237, 237);
+  --border-color: rgb(237, 237, 237);
+  --shadow-color: rgb(237, 237, 237);
+
+  --padding: 8px 16px;
+
+  box-sizing: border-box;
+  font-family: ui-sans-serif, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  margin: 50px;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+.todo__title__container {
+  display: flex;
+  flex-direction: row;
+  gap: 48px;
+  margin-bottom: 20px;
+}
+
+/*---sort---*/
+
+.title-sort {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.sort__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.sort__item {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  background-color: var(--hover-color);
+  border: none;
+  font-size: 14px;
+  padding: var(--padding);
+  border-radius: 8px;
+}
+
+.sort-label {
+  font-weight: 500;
+}
+
+/*---buttons---*/
+button {
+  background-color: var(--button-bg-color);
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+}
+
+button:active {
+  filter: invert();
+}
+
+.button-title {
+  padding: var(--padding);
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.add-button {
+  background-color: var(--button-bg-color-accent);
+  color: var(--button-text-accent);
+}
+
+.add-button:hover {
+  background-color: var(--button-bg-color-accent-darker);
+}
+
+.sort-button {
+  background-color: white;
+  color: black;
+}
+
+.remove-button {
+  display: flex;
+  padding: 8px;
+  align-items: center;
+}
+
+/*---todo---*/
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+}
+
+.itemTodo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 4px 4px 8px var(--shadow-color);
+}
+
+.todo-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+}
+
+input[type='text'] {
+  background-color: none;
+  border: none;
+  font-size: 20px;
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type='datetime-local'] {
+  background-color: var(--hover-color);
+  border: none;
+  font-size: 14px;
+  padding: var(--padding);
+  border-radius: 8px;
+}
+
+.date-create {
+  font-size: 14px;
+}
+
+.done>input[type='text'] {
+  text-decoration: line-through;
+  color: var(--text-color-done);
+}
+
+/*---notifications---*/
+.task__container {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.task__container>div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: end;
+}
+
+.notification__container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 20px;
+  padding: 20px;
+  background-color: var(--bg-color);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 4px 4px 8px var(--shadow-color);
+}
+
+.title__container {
+  width: 250px;
+}
+
+.title__container>* {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notification-button {
+  padding-top: 2px;
 }
