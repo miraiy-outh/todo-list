@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoList from './Todo/TodoList';
 import Context from './context';
 import TaskComponent from './Notifications/TaskComponent';
 import { IdGenerator } from './utils/IdGenerator';
 import { CompareByCreatedDate, CompareByDate } from './utils/Compare';
+import { useLocalStorage } from './hooks/UseLocalStorage'
 
 function App() {
-  const [todos, setTodos] = useState(
-    []
-  );
+
+  const [todos, setTodos] = useLocalStorage('todos', []);
 
   function toggleTodo(id) {
     setTodos(
