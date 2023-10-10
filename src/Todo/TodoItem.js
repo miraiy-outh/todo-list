@@ -17,10 +17,10 @@ function TodoItem({ todo }) {
 
     return (
         <li>
-            <span className={`itemTodo ${todo.completed ? 'done' : ''}`}>
+            <span className={`todo__item ${todo.completed ? 'done' : ''}`}>
                 <input
                     type='checkbox'
-                    className={`todo-checkbox ${todo.completed ? 'doneInput' : ''}`}
+                    className={'todo-checkbox'}
                     onChange={() => toggleTodo(todo.id)}
                 />
                 <input
@@ -36,7 +36,10 @@ function TodoItem({ todo }) {
                     onChange={handleDateChange}
                     onBlur={() => changeDateTodo(todo.id, todo.date)}
                 />
-                <button className="remove-button" onClick={() => removeTodo(todo.id)}>
+                <button
+                    className="remove-button"
+                    onClick={() => removeTodo(todo.id)}
+                >
                     <CloseIcon />
                 </button>
             </span>

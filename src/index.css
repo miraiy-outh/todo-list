@@ -118,7 +118,7 @@ li {
   flex-direction: row;
 }
 
-.itemTodo {
+.todo__item {
   display: flex;
   flex-direction: row;
   align-items: center;

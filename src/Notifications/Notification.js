@@ -22,7 +22,10 @@ const Notification = ({ id, title }) => {
                 <p style={{ fontWeight: 500 }}>{title}</p>
             </div>
 
-            <button className='notification-button' onClick={closeNotification}>
+            <button
+                className='notification-button'
+                onClick={closeNotification}
+            >
                 <CloseIcon />
             </button>
         </div >

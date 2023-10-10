@@ -58,7 +58,6 @@ function App() {
         closed: false
       }]
     );
-    console.log(todos);
   }
 
   const [sortByCreatedDate, setSortByCreatedDate] = useState(false);
@@ -87,18 +86,49 @@ function App() {
         <h1 className='todoHeader'>Список задач</h1>
 
         <div className='todo__title__container'>
-          <button className='button-title add-button' onClick={addTodo}>Добавить задачу</button>
+          <button
+            className='button-title add-button'
+            onClick={addTodo}
+          >
+            Добавить задачу
+          </button>
           <div className='sort__container'>
             <p className='title-sort'>Сортировать</p>
 
             <div className='sort__item'>
-              <input type='checkbox' id='create' name='sort' className='sort sort-create' checked={sortByCreatedDate} onChange={handleSortByCreatedDateChange} />
-              <label htmlFor='create' className='sort-label'>по дате создания</label>
+              <input
+                type='checkbox'
+                id='create'
+                name='sort'
+                className='sort sort-create'
+                checked={sortByCreatedDate}
+                onChange={handleSortByCreatedDateChange}
+              />
+
+              <label
+                htmlFor='create'
+                className='sort-label'
+              >
+                по дате создания
+              </label>
             </div>
 
             <div className='sort__item'>
-              <input type='checkbox' id='deadline' name='sort' className='sort sort-deadline' checked={sortByDeadline} onChange={handleSortByDeadlineChange} />
-              <label htmlFor='deadline' className='sort-label'>по дедлайну</label>
+              <input
+                type='checkbox'
+                id='deadline'
+                name='sort'
+                className='sort sort-deadline'
+                checked={sortByDeadline}
+                onChange={handleSortByDeadlineChange}
+              />
+
+              <label
+                htmlFor='deadline'
+                className='sort-label'
+              >
+                по дедлайну
+              </label>
             </div>
           </div>
         </div>
