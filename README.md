@@ -21,4 +21,3 @@ npm install
 ```bash
 npm start
 ```
-Открыть локально [http://localhost:3000](http://localhost:3000)
